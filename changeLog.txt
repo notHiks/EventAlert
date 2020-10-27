@@ -1,0 +1,513 @@
+8.2.5
+Bugfix: Fixed issue displaying aura timer
+
+8.0.3
+Improvement: Improved FrameStrata for alert icon frames.
+Improvement: Made it clearer that only the leftmost frame can be dragged.
+Improvement: Added a check to clear alerts on specialization change.
+Bugfix: Fixed "power" alerts for druids
+Bugfix: Fixed "power" alerts for arcane mages.
+
+
+8.0.2
+Bugfix: Fixed an issue that caused Maelstrom to be improperly displayed.
+
+8.0.1
+Bugfix: Fixed an issue that would remove alerts instantly
+Improvement: Added some spells for Hunters and Paladins.
+Improvement: More refactoring.
+
+8.0.0
+Bugfix: Battle for Azeroth compatibility!
+Improvement: Re-organized event handling/code a bit.
+
+7.0.3
+Change: Added some special requests to tracked spells.
+
+7.0.2
+Change: Added some special requests to tracked spells.
+
+7.0.1
+Bugfix: Attempted to fix issues with the new "powers" in game. Demon Hunters will probably need to be manually added eventually.
+Bugfix: Fixed some icons that were no longer in the game that were hard coded. Moved their value to "textArray.lua".
+Bugfix: Removed a lot of spells that were no longer ingame. Delete your saved variables!
+Change: Also added a lot of new spells to track!
+Bugfix: Fixed an error that prevented the addon from working with druids.
+TODO: Try every class for new procs that need to be tracked, especially AltAlerts since they cannot be added manually.
+
+7.0.0
+Change: Attempted to add "support" for Demon Hunters.
+Change: Changed the way icons were displayed to work with the new patch.
+Bugfix: Fixed a long-standing error that made it so menu checkboxes would not show as checked until choosing the menu option a second time.
+
+6.0.2
+Bugfix: Tried to fix bug with paladin Holy Power tracking.
+Bugfix: Fixed issue with sound effects not playing.
+Change: Removed unstackable Brain Freeze and replace it with Stacking Brain Freeze.
+
+6.0.1a
+Bugfix: Attempted to fix an issue with alt items staying on screen after they were supposed to go away.
+
+6.0.1
+Bugfix: Attempted to fix an issue for druids.
+
+6.0
+Cleanup: Removed all deprecated spells from class files. Most of them didn't crash the addon but monk power tracking was causing issues.
+Cleanup: Accessed coding issues in the addon. A complete rewrite would be in order but time is lacking.
+Change: Combo points will now be tracked using PowerTypes instead of "GetComboPoints".
+Bugfix: Eclipse should now be tracked properly.
+
+5.2.1
+Bugfix: Fixed timers for alerts with more than 30 seconds remaining.
+Bugfix: Attempting to fix an ongoing issues with AltItem alerts.
+
+5.2.0
+Bugfix: Made the addon even better at handling errors caused by new patches. (Remember to clear SavedVariables after each new patch.)
+
+5.1.9alpha
+Bugfix: Attempted to fix an issue with stacking buff tracking.
+
+5.1.8
+Bugfix: Attempted to make the addon better at handling errors cause by new patches.
+Bugfix: Shadowburn should now be tracked properly.
+
+5.1.7
+Change: Should no longer display as out of date for patch 5.2.
+Bugfix: Removed the now deprecated "Taste for Blood" from the list of stacking buffs and replaced it with the new version.
+
+5.1.6
+Added: Bastion of Glory is now tracked by default as a stackable buff.
+Change: Stacking buffs can now be added to the list of tracked spells by using the custom spellID textbox.
+
+5.1.5
+Bugfix: Made it so "Holy Power" and "Art of War" properly display their icons.
+
+5.1.4b
+Change: Removing garbage/legacy code and cleaning the code in general.
+Change: Added Mangle to the "ability proc" list.
+
+5.1.4
+Change: Adapted the Interface # to PTR 5.1's interface version.
+
+5.1.3
+Change: Changed the way stacking buffs were handled to prevent an issue with some stacking buffs being removed when they should have been displayed.
+Added: Tigereye Brew and Mana Tea as trackable stackable buffs.
+
+5.1.2
+Bugfix: Attempt to fix issues with updating multiple stacking buffs that changed values simultaneously.
+
+5.1.1
+
+Added: Divine Insight for holy and discipline.
+Added: Anticipation is now trackable as a stacking buff.
+
+5.1.0
+
+Bugfix: Fixed the monk power tracking issue, Chi is now able to be tracked.
+Bugfix: Fixed the mage "Arcane Charge" spell not being tracked.
+Change: As a result of the above change, debuffs on the player should now be trackable as custom alerts. (e.g.: Tracking the time left on "Dark Simulacrum" or "Weakened Soul" on the player.)
+Added: Added the newer slash commands to the help text listing /commands when typing an invalid /ea ... slash command.
+
+5.0.9
+
+Bugfix: Fixed a lua error that would appear for monk players. Chi tracking is still not functional, will need to look into it.
+
+5.0.8
+
+Bugfix: Lava Surge will now be tracked as a buff proc rather than an alternate event.
+Bugfix: Cinderglacier will now be tracked as a stackable buff.
+
+5.0.7b
+
+Added: Searing Flames will now be tracked as a stackable buff, displaying an alert at 5 stacks.
+
+5.0.7a
+
+Bugfix: Victory Rush will now be tracked by buff rather than by activation.
+Added: Typing "/ea showframe" or "/ea showtest" in the game's chat box will now toggle test frame.
+Added: Typing "/ea togglelock" or "/ea toggleframelock" will now toggle the lock on alert position.
+
+5.0.7
+
+Note: This version's only purpose was to expand the amount of spells tracked, especially in the stackable buffs section, since those spells cannot appear with stacks as custom spells.
+
+Bugfix: "Raging Blow" (Warrior - Fury) was being tracked in the wrong section and as a result appeared without stacks, it should now display stacks properly.
+Change: "Lightning Shield" (Shaman) will now display its alert at 7 stacks by default, instead of 6.
+Added: "Surge of Blood" (Warrior - Fury) will now be tracked as a stackable buff, displaying the number of stacks remaining.
+Added: "Meat Cleaver" (Warrior - Fury) will now be tracked as a stackable buff, displaying an alert at 3 stacks by default.
+Added: "Ultimatum" (Warrior - Protection) will now be tracked by default.
+Added: "Glyph of Hamstring" (Warrior - Glyph) is now available for tracking in the options menu.
+Added: "Dispatch" and "Blindside" (Rogue - Assassination) will now be tracked by default.
+Added: "Scent of Blood" (Death Knight - Blood) will now be tracked as a stackable buff, displaying an alert at 5 stacks by default.
+Added: "Will of the Necropolis" (Death Knight - Blood) will now be tracked by default.
+Added: "Crimson Scourge" (Death Knight - Blood) will now be tracked by default.
+Added: "Glyph of Dark Succor" (Death Knight - Glyph) is now available for tracking in the options menu.
+Added: "Thrill of The Hunt" (Hunter - Specialization) will now be tracked by default.
+Added: "Lock and Load" (Hunter - Survival) will now be tracked by default.
+Added: "Fire!" (Hunter - Marksman) will now be tracked by default. "Ready, Set, Aim..." must now be activated in the options for it to display an alert.
+Added: "Arcane Missiles!" (Mage - Arcane) will now be tracked as a stackable buff rather than as an ordinary buff.
+Added: "Selfless Healer" (Paladin - Specialization) will now be tracked as a stackable buff, displaying an alert at 3 stacks by default.
+Added: "Glyph of Double Jeopardy" (Paladin - Glyph) is now available for tracking in the options menu.
+Added: "Glyph of Mind Spike" (Priest - Glyph) will now be tracked as a stackable buff, displaying an alert at 2 stacks by default.
+
+5.0.6d
+Bugfix: Improved the detection of power alerts on the screen, should no longer disappear after appearing for a short amount of time and stay until the value falls
+ below the chosen stack value.
+Added: Demonic Rebirth to the list of buffs tracked by default.
+Added: Backdraft and Havoc to stackable buffs so Destruction Warlocks can join the stackable buff display fun times.
+Added: Monk spells to the default tracking. (Chi, Combo Breaker procs, Elusive Brew, Vital Mists)
+
+5.0.6c
+Bugfix: Added the right spellID for "Brain Freeze" to the default spells tracked.
+Bugfix: Fixed the lua error when trying to delete custom spellIDs.
+Bugfix: Fixed a problem with classes which had both stackable buffs and a stackable "power" ressource type.
+Bugfix: Fixed disparity between template icons and actual alert icons.
+Added: Alert for Inferno Blast usage when Heating Up procs.
+
+5.0.5
+IMPORTANT: You must delete the EventAlert.lua and EventAlert.lua.bak files at \World of Warcraft\WTF\Account\ACCOUNTNAME\SavedVariables for the program to work
+properly.
+
+Bugfix:  Removed spells that were no longer in the game.
+Bugfix:  Adapted the COMBAT_LOG_EVENT_UNFILTERED loop for changes to the API in 4.1 and 4.2.
+Added:   Support for the new warlock class ressources. (Currently displays an alert at 3 Soul Shards, 3 Burning Embers or 1000 Demonic Fury)
+Added:   Support for Shadow Orbs as a ressource (as opposed to a buff) added. (Displays an alert at 3 Shadow Orbs)
+Added:   Support for some new spells in patch 5.0.4.
+Added:   Support for the Monk class. (Custom spells only so far.)
+
+4.7.6
+Bugfix:  Fixed problem with spell charges not showing up on alerts.
+Bugfix:  Fixed problem with alerts not showing when options changed without a reload.
+Change:  Added option to show/hide spell charges.
+
+4.7.5
+Bugfix:  Fixed a problem with new installs erroring.
+Bugfix:  Cleaned up Holy Power tracking code.
+Added: Rogue: Combo Points
+Added: Druid: Combo Points
+
+4.7.4
+Bugfix:  Fixed problem with Holy Power still showing when disabled.
+Added:  Hunter:  Counterstrike
+Added:  Warlock: Shadowburn
+
+4.7.3
+Bugfix:  Fixed problem with Lava Surge proccing from other Shamans in the group.
+Bugfix:  Fixed problem with Priest Surge of Light.
+Bugfix:  Fixed problem with scroll pane in preset alerts not scrolling far enough.
+Added:  Priest:  Dark Evangelism
+
+4.7.2
+Bugfix:  Attempt to fix LUA error for Pallies.
+
+4.7.1
+Bugfix:  Fixed problem with alert icon screen position not saving.
+Bugfix:  Fixed problem with About frame popping up on each load.
+
+4.7.0
+YOU MUST QUIT WOW, DELETE THE OLD EVENTALERT FOLDER BEFORE INSTALLING THE NEW VERSION.  A SIMPLE RELOADUI WILL NOT WORK.
+
+IF YOU ARE GETTING LUA ERRORS EVEN AFTER THE NEWEST INSTALL, THEN DELETE YOUR SAVEDVARIABLES FILE LOCATED HERE:
+\World of Warcraft\WTF\Account\ACCOUNTNAME\SavedVariables
+
+Bugfix:  Due to LUA errors across different versions of EventAlert, a total wipe of the SavedVariables file was needed (except custom added IDs).  Sorry!  :(
+Changed:  All new options menu.  Hopefully it is much easier to use now.
+Changed:  Recode of many of the loops used to show alerts.  Hopefully the addon is using less memory now for most people.
+Changed:  Alerts won't show when on cooldown.
+Added:  Warrior: Battle Trance, Lambs to the Slaughter
+Added:  Paladin: Surge of Light
+
+
+4.6.1
+Bugfix:  Fixed problem with variables not saving correctly and causing LUA errors.
+If you are still getting errors, please try closing WoW and removing your SavedVariables file located at:
+\World of Warcraft\WTF\Account\ACCOUNTNAME\SavedVariables\EventAlert.lua and EventAlert.lua.bak
+
+4.6.0
+Bugfix:  LUA error on load
+Removed:  Paladin spell: Speed of Light
+
+4.5.9
+Bugfix:  Fixed problem with changing number of charges with Holy Power
+Added:   Charge counter to Holy Power
+Added:   Priest Spell: Evangelism
+
+4.5.8
+Bugfix:  Another attempt at the LUA errors
+Added:  Mage spell:  Arcane Missiles
+
+4.5.7
+Bugfix:  LUA error fixes.
+Bugfix:  Fixed problem with alternate alerts not displaying.
+Added:  Death Knight spell: Dark Transformation
+Added:  Death Knight spell: Sudden Doom
+
+4.5.6
+Bugfix:  Fixed a problem with 4.5.5 on characters other than Pallies.
+
+4.5.5
+Bugfix:  Removed "Lava Surge!" spam from chat window.  Sorry about that, was my bad!
+Bugfix:  Fixed Druid Eclipse icons.
+Added:  Druid spell:  Shooting Stars
+Added:  Warrior spell:  Incite
+Added:  Mage spell: Arcane Blast (4 stacks default)
+Added:  Tracking of Paladin Holy Power (3 stacks default)
+
+4.5.4
+Bugfix: More LUA error fixes.
+Added:  Pally spell: Denounce
+Added:  Pally spell: Speed of Light
+Added:  Pally Spell: Grand Crusader
+Added:  Pally Spell: Sacred Duty
+
+4.5.3
+Bugfix:  Various LUA errors.
+Bugfix:  Problem with stacking spells not clearing properly when dropping below set number of stacks.
+Change:  Removed timers on spells if time is greater than 30 seconds.
+Change:  Priest spell Serendipity set to 2 stack default.  (Will not change current settings, only new EA installs.)
+
+4.5.2
+Bugfix:  Shaman spells not proccing correctly.
+Bugfix:  Rogue error on login.
+
+4.5.1
+Bugfix:  Fixed problem with alternate alerts disappearing on the screen before they were used.
+Added: Hunter - Master Marksman - 5 stacks default
+Added: Paladin - Hand of Light
+Added: Paladin - Daybreak
+
+4.5.0
+Bugfix: Buffs getting stuck on screen.
+
+Added: New option for stacking abilities.  You can change the default stacks when EventAlert will pop up in the options menu.
+Added: Priest - Shadow Orb - 3 stacks default
+Added: Shaman - Lightning Shield - 6 stacks default
+Added: Shaman - Maelstrom Weapon - 5 stacks default
+Added: Warrior - Thunderstruck - 3 stacks default
+
+4.4.1
+Bugfixes:  Alerts getting stuck on screen.
+Sound Select Dropdown Menu
+Custom Alerts Dropdown Menu
+Version checking problems
+Error on login with Mages
+
+4.4.0 - Update for the 4.0.1 patch.  This is a simple bugfix patch.  No new spells or features added yet.
+
+4.3.6 - Bufgix:  Have I finally fixed the bug with alerts getting suck on the screen?  I think so!  If not, please let me know.  Thanks!
+
+4.3.5 - Bugfix:  Still working at Fingers of Frost.  This re-code changed code to Maelstrom Weapon and Serendipity... so hopefully those aren't bugged now too.
+From what I have tested, things are working.  But I need more reports if they aren't.  Thanks all!
+
+4.3.4 - Bugfix:  Yet another attempt at fixing Fingers of Frost.
+
+4.3.3 - Bugfix:  Another attempt at fixing Fingers of Frost.
+Added:  Mage Talents: Impact, Blazing Speed
+
+4.3.2 - Bugfix:  Fixed (hopefully) a problem with Fingers of Frost getting stuck on the screen.
+
+4.3.1 - Added:  New option to show spell name and ID in the main chat window when a buff or proc activates.
+        This is used when trying to figure out a spell ID to add as a custom spell ID.
+
+4.3.0 - Added:  The ability to add/remove custom spell procs.  Instructions will show on first load after updating.
+
+4.2.31 - Bugfix:  Fixed a problem with the spell timer option bugging under certain circumstances.
+
+4.2.30 - Bugfix:  Fixed a problem with the Warlock talent "Molten Core".
+
+4.2.29 - Bugfix:  Fixed a problem with the Mage talent "Fingers of Frost".
+
+4.2.28 - Checked reports of events not working.  As of now, they all have been tested to work... if you are still having issues with particular items not reporting,
+         try closing WoW, deleting your EvenAlert saved variables file, then restarting WoW.  If you still have issues after that please let me know on WoWInterface or Curse.
+Added Warlock ability: Pyroclasm
+Added Druid ability:  Predator's Swiftness
+Added Paladin ability: Light's Grace
+
+4.2.27 - Updated TOC to current version.  Please report any bugs and issues to WoWInterface.  Thanks!
+
+4.2.26 - Change: More CPU load changes.  This should be a pretty big improvement. Let me know on WoWInterface or Curse.  Feedback is important!  :)
+
+4.2.25 - Bugfix:  Fixed the problem of errors on game load.
+It looks as if it was erroring when it was trying to pre-load spells that didn't exist to the player (the character was too low in level and didn't have the spell or didn't have it trained.)
+Thanks for all the bug reports on this one, hopefully this gets it fixed for good.  :)
+
+4.2.24 - Change:  Added some code to help with CPU load.  Should drop CPU load a bit while the addon isn't showing alerts.
+Bugfix:  Fixed a problem with timers not showing on alerts that had procced after an alternate alert had shown.
+Bugfix:  Hopefully fixed the problem of errors on initial load of the game.
+         (Note that I wasn't able to replicate this problem, and not everyone is having the issue.  If you are one of the people having this problem, please report it! Thanks!)
+
+4.2.23 - Bugfix:  Fixed the FPS lagging bug as well as the error on loading.  All were related to alternate alerts.  They are making me mad.  This better be the last bug damnit!  :P
+
+4.2.22 - Bugfix:  Yet another issue with alternate alerts.  Was causing errors on initial game load, but not with a /reloadui.  Go figure.  Hope this is the last!  :P
+
+4.2.21 - Bugfix:  Fixed problem with alternate alerts that was causing overlapping frames as well as frames not clearing when abilities were no longer active.
+
+4.2.20 - Bugfix:  Fixed a memory problem when alternate alerts were enabled.  Was causing quite a bit of UI lag.  Shouldn't anymore!  :)
+
+4.2.19 - Added Warlock Buff:  Eradication
+Added Priest Buffs: Borrowed Time, Holy Concentration
+Bugfix:  Fixed an issue with the Sacred Shield timer when player was specced into Divine Guardian.
+
+4.2.18 - Added Paladin Buff:  Sacred Shield
+Bugfix:  Fixed a problem with frames trying to anchor to themselves when alternate buffs were enabled.
+
+4.2.17 - Bugfix:  Fixed a problem in the class alerts menu that wouldn't allow checkboxes to change when clicked.
+Change:  Changed the functionality of the Primary/Alternate alert options menu to make it easier to use and understand.
+
+4.2.16 - Added Druid Buff:  Elune's Wrath (T8 Set Bonus)
+Re-arranged the options menu to be a bit easier to understand.
+Added a few new alert sounds.
+
+4.2.15 - Bugfix:  Fixed an issue with primary and alternate alerts causing problems with each other.
+The bug was causing frame errors as well as making primary alerts disappear after proccing, when you had alternate alerts enabled.
+
+4.2.14 - Added ability to track items that are activated due to a combat event and do not put a buff on the player.
+Note:  These abilties are disabled by default!
+Added Death Knight ability: Rune Strike
+Added Hunter ability: Kill Shot
+Added Paladin ability: Hammer of Wrath
+Added Rogue ability: Riposte
+Added Warrior abilities:  Overpower, Execute, Revenge, Victory Rush
+
+4.1.14 - Added Warlock Glyph:  Glyph of Life Tap
+
+4.1.13 - Change:  Serendipity will now only proc on the 3rd stack.
+Bugfix: Trinket procs will now show properly without breaking the mod.
+
+4.1.12 - Bugfix:  Icon options frame was erroring when clicking on it to move it on the screen.
+
+4.1.11 - Remove old Death Knight buff: Sudden Doom.  Was causing an error, and doesn't fit the mod's focus any longer.
+
+4.1.10 - Removed old Priest buff:  Holy Concentration
+Bugix:  Fixed issue with Serendipity.  It shouldn't break EA anymore!  :)
+
+4.1.9 - Added Priest Buff: Serendipity (Holy)
+Removed old Warlock Buff: Eradicate.  Blizzard changed it and removed the old spellID. It was causing errors.
+
+4.1.8 - Added Warlock Buff: Decimation (Demonology)
+
+4.1.7 - Added option to change horizontal and vertical spacing of the alert frames.
+Added Hunter Buff:  Rapid Killing (Marksmanship)
+
+4.0.6b - Updated TOC for 3.1
+
+4.0.6 - Added Shaman Buff:  Tidal Waves (Restoration)
+
+4.0.5 - Bugfix:  Fixed an issue with incompatablities with other mods. Let's hope this is an end-all fix!  :)
+
+4.0.4 - Bugfix:  Fixed a problem with major memory issues.  EA shouldn't be such a memory hog now.
+  Bugfix:  Possibly fixed an issue with an error when opening the class events pane in the options panel.  (And maybe even fixes non-English clients.  Let's hope!)
+
+4.0.3 - Added a version check option to the slash commands.  (/ea ver -or- /ea version)
+  Bugfix:  Fixed bug where frames wouldn't close when using the ESC key.
+           Note: Because the mod can now show more than one proc, some people may not like this function.  It is now an option in the options pane.  Note that it requires a reload of the UI after changing the option.
+
+4.0.2 - Bugfix:  Pallies would get alerts on Holy Shield and Shadow Resist Aura.  Those are the skills I use to test the mod, and I forgot to remove them before uploading.
+
+4.0.1 - Bugfix:  EA *SHOULD* play nicely now with other mods that use the chat frames.
+  Bugfix:  Anchor frame and Alert frame now have same positions.
+
+4.0.0 - EA will now show more than one frame per proc
+Bugfix:  EA Frame wasn't able to be clicked through and would not allow you to turn the camera or your character if a proc was active.
+Added Mage Buff:  Blazing Speed (Fire)
+
+3.4.9 - Made the Druid proc "Eclipse" more noticable as to which (Wrath or Starfire) has procced.
+
+3.4.8 - Added Hunter Buff:  Improved Steady Shot (Marksmanship)
+
+3.4.7 - Added an option to reset the location of the frame to default.
+Bugfix:  Fixed issue with frame location resetting each time WoW is loaded.
+
+3.3.6 - Added option to change the size and position of the timer to mimic the OmniCC addon's timer.
+
+3.2.6 - Added option to change the size of the alert icon.
+
+3.1.6 - Bugfix:  Fixed an issue with testing the frame and then breaking the timer.
+Bugfix:  Fixed Shaman buff: Maelstrom Weapon (Enhancement)
+
+3.1.5 - Added Death Knight buff:  Cinderglacier (Runeforging)
+
+3.1.4 - Bugfix:  Fixed some issues with the proc frame.
+
+3.1.3 - Added an elapsed time option that shows near the alert frame.
+  Enabled by default, but can be turned off in the options.
+
+3.0.3 - Added Warlock buff:  Eradication (Affliction)
+
+3.0.2 - Bugfix:  Fixed problem caused by typo.
+
+3.0.1 - Added Death Knight buffs:  Rime [Freezing Fog] (Frost), Killing Machine (Frost), Sudden Doom [Death Trance!] (Blood)
+
+3.0.0 - Added Warlock buffs: Backdraft (Destruction),  Empowered Imp (Destruction), Molten Core (Destruction)
+Added Warrior buff: Taste for Blood (Arms)
+Added Other buff:  Quagmirran's Eye (Spell Haste)
+Added the option to not show the buff's name on the frame on events.
+
+2.9.16 - Bugfix:  Fixed problem with Death Knight abilities causing the mod to error.
+
+2.9.15 - Bugfix:  Fixed a problem with item procs working with class procs.
+
+2.9.14 - Bugfix:  Fixed problem with Rogue abilities causing the mod to error.
+
+2.8.14 - Bugfix:  Not all languages were working properly due to code changes in the last version.  Should be fixed now.
+
+2.7.14 - Added option to ignore certain events.
+Note:  Because of the way Blizzard IDs and names their procs to spells, and to allow this mod to be easily localized, I have to sort by spell IDs in the options menu.  As such, not all spells that have multiple ranks will be in alphabetical order.
+
+* Fixed bug in options that didn't show the sound notification dropdown on EventAlert first install.
+
+2.6.14 - Fixed bug with Backlash.
+
+2.6.13 - Removed Maelstrom Weapon for now.  Working on a way to track only the 5th proc.
+
+2.6.12 - Fixed Lock and Load proc.
+
+2.6.11 - Added Mage Fire proc "Firestarter".
+
+2.6.10 - Added Infusion of Light (Rank 2).
+
+2.6.9 - Added Warrior Arms proc "Sudden Death".
+  * Added Shaman Enhancement proc "Maelstrom Weapon" (Fifth stack only).
+
+2.6.8 - Bugfix:  Surge of Light spell ID was incorrect.
+
+2.6.7 - Added Paladin Retribution proc "Art of War"
+
+2.6.6 - Added Paladin Holy proc "Infusion of Light"
+  * Re-wrote spell array to allow for localization of addon.  EventAlert should work in all languages of the client now.  :)
+  * Added sound and flash to the "toggle" button for testing purposes when changing options.
+  * Added the option to change the sound played on events.
+
+2.5.5 - Added fullscreen flash effect on events. (Disabled by default)
+
+2.4.5 - Bugfix: Alert frame wasn't closing with options panel.
+
+2.3.5 -
+Bugfix: Alert frame wasn't closing on ESC.
+Bugfix: Alert frame icon wasn't changing after opening it from the options menu.
+
+2.2.5 - Created a "Dummy Frame" so that you are able to see the notification frame without having a proc active. Useful for moving the frame.
+
+2.1.5 - Added druid Balance procs "Eclipse", "Nature's Grace" and "Owlkin Frenzy".
+
+2.1.4 - Added Mage Arcane proc "Missile Barrage".
+
+2.1.3 - Added Warrior Protection proc "Sword and Board".
+
+2.1.2 - Added Mage Frost proc "Fingers of Frost", added Mage Fire proc "Hot Streak".
+
+2.1.1 - Fixed a bug that wasn't allowing settings to save between sessions.
+
+2.0.1 - Added "Clearcasting" proc. (Arcane Concentration, Holy Concentration, Elemental Focus, Omen of Clarity).
+
+2.0 - Added Warrior Fury proc "Bloodsurge".
+
+1.9 - Made the notification frame movable.
+
+1.8 - Added Warrior Glyph proc "Glyph of Revenge".
+
+1.7 - Added Mage Frost proc "Brain Freeze".
+
+1.6 - Added Hunter Survival proc "Lock and Load".
+
+1.5 - Updated TOC for 3.0.

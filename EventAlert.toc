@@ -1,0 +1,9 @@
+## Interface: 80205
+## Title: EventAlert
+## Notes: Simple warnings for event procs
+## Original Author: CurtisTheGreat(AIM) [Real ID: curtis AT fischerfam DOT net]
+## Maintainer: Menio#1114(BattleTag) [E-mail: menio.wow AT gmail DOT com]
+## Version: 8.2.5
+## SavedVariables: EA_Config, EA_Position, EA_Items, EA_AltItems, EA_StackingItems, EA_StackingItemsCounts, EA_CustomItems
+
+EventAlert.xml
